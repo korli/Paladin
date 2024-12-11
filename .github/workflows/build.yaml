@@ -25,5 +25,5 @@ jobs:
           version: ${{ matrix.config.version }}
           architecture: ${{ matrix.config.architecture }}
           run: |
-            ssh user@localhost "pkgman update -y haiku_devel devel:libpcre devel:libz unittest++_devel cmd:gcc" &&
+            ssh user@localhost "pkgman update -y haiku_devel devel:libpcre devel:libz unittest++_devel cmd:gcc gcc_syslibs_devel" &&
             sh ./buildsuite.sh 1
